@@ -1,0 +1,6 @@
+.display-container {
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid red;
+    justify-content: end;
+}
