@@ -33,8 +33,10 @@ const operate = (operator, list) => {
     if (!operation) {
         throw new Error("Unsupported operator");
     }
-    if (operator === "/" && list.includes(number => number === 0) === 0) {
-        throw new Error("You cannot divide by 0")
+    if (operator === "/" && list[1] === 0) {
+        currentDisplayNumber.textContent = "Error";
+        isAfterOperate = true;
+        return;
     }
     let result = list.reduce(operation);
     displayOperator.textContent = '';
